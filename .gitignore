@@ -1,0 +1,44 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# PyTorch Lightning
+lightning_logs/
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local development
+*.log
+.env
+.env.local
+
+# Model checkpoints
+*.ckpt
+*.pth
+
+# Output and samples directories
+input/*
+output/*
+samples/*
+
+# Package manager
+.python-version
