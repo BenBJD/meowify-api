@@ -21,6 +21,8 @@ from meowifylib.run import meowify_song
 # Configure environment
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
+model_checkpoint = "/checkpoint/trained.ckpt"
+
 # Initialize FastAPI app
 app = FastAPI(title="Meowify API", description="API for Meowify audio processing")
 
@@ -74,7 +76,7 @@ async def meowify_audio(
             i += 1
 
         # Use meowify_song function to process the audio
-        mixed_audio = meowify_song(input_path, sample_choices, "../trained.ckpt")
+        mixed_audio = meowify_song(input_path.split(".")[0], sample_choices, model_checkpoint)
 
         # Save the result to a BytesIO object
         output_buffer = io.BytesIO()

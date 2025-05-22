@@ -43,7 +43,8 @@ while True:
 
     print("\n")
 
-    output = meowify_song("input/" + song_names[choice], sample_choices, "trained.ckpt")
+    output = meowify_song("input/" + song_names[choice], sample_choices,
+                          "checkpoint/trained.ckpt")
 
     # Save the final mix and midi
     sf.write(f"output/{song_names[choice]}_gen.wav", output, 22050)

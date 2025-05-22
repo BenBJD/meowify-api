@@ -40,5 +40,6 @@ input/*
 output/*
 samples/*
 
+
 # Package manager
 .python-version
