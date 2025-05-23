@@ -1,4 +1,13 @@
 services:
   api:
+    image: ghcr.io/benbjd/meowify-api:main
+    volumes:
+      - ./checkpoint:/checkpoint
     ports:
       - "8000:8000"
+    networks:
+      - meowify-network
+
+networks:
+  meowify-network:
+    driver: bridge
