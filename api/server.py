@@ -21,7 +21,7 @@ from meowifylib.run import meowify_song
 # Configure environment
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-model_checkpoint = "/checkpoint/trained.ckpt"
+model_checkpoint = "./checkpoint/trained.ckpt"
 
 # Initialize FastAPI app
 app = FastAPI(title="Meowify API", description="API for Meowify audio processing")
